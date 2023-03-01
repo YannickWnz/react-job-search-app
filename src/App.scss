@@ -1,0 +1,686 @@
+// @import '../../GlobalStyle/color-variables';
+@import './color-variables';
+
+.search-section {
+    width: 100%;
+    height: 160px;
+    border-bottom-left-radius: 100px;
+    background-color: #5964E0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%237781d7' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+    position: relative;
+
+    .search-section-container {
+        width: 100%;
+        max-width: 1200px;
+        height: inherit;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+
+        .logo-section {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                color: white;
+                font-weight: bold;
+                font-size: 2em;
+            }
+
+        }
+
+        .search-form-container {
+            width: 100%;
+            height: 90px;
+            border-radius: 10px;
+            transform: translateY(10px);
+            background-color: $veryDarkBlue;
+
+            form {
+                width: 100%;
+                height: inherit;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+
+                div {
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        color: $violet;
+                        font-size: 1.5em;
+                        margin: 0 30px;
+                    }
+
+                    input[type=text] {
+                        width: 100%;
+                        border: none;
+                        background: transparent;
+                        font-size: 1.5em;
+                        outline: none;
+                        color: white;
+                        cursor: pointer;
+                        height: inherit;
+                    }
+
+                }
+
+                .title-search {
+                    width: 80%;
+                    height: inherit;
+                }
+
+                .location-search {
+                    width: 30%;
+                    height: inherit;
+                    border-right: .5px solid $darkGrey;
+                }
+
+                .option-search {
+                    width: 15%;
+                    height: inherit;
+                    position: relative;
+                    text-align: center;
+
+
+                    input[type=checkbox] {
+                        margin: 0 15px;
+                        height: 25px;
+                        width: 25px;
+                        cursor: pointer;
+                        border: none;
+                    }
+
+                    label {
+                        color: white;
+                        font-weight: bold;
+                    }
+
+                    .full-time-checkbox {
+                        border: 1px solid white;
+                    }
+                }
+
+                .submit-btn-wrapper {
+                    width: 15%;
+                    display: flex;
+                    justify-content: center;
+
+                    input {
+                        padding: 15px 40px;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 1.1em;
+                        background-color: $violet;
+                        border: none;
+                        border-radius: 7px;
+                        cursor: pointer;
+                    }
+
+                    input:hover {
+                        background-color: $lightViolet;
+                    }
+
+                }
+
+            }
+
+            .search-form-error-msg {
+                color: crimson;
+                font-size: 1.2em;
+                transform: translateY(-10px);
+            }
+
+        }
+
+    }
+
+}
+
+
+
+.jobs-section {
+    width: 100%;
+    min-height: 300px;
+    padding: 150px 0 50px;
+
+    .jobs-section-container {
+        width: 100%;
+        max-width: 1200px;
+        min-height: 400px;
+        margin: auto;
+
+        .jobs-wrapper {
+            width: 100%;
+            min-height: 300px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 380px);
+            justify-content: space-around;
+            row-gap: 100px;
+            column-gap: 20px;
+
+            a {
+                text-decoration: none;
+            }
+
+
+            .job {
+                min-height: 220px;
+                border-radius: 5px;
+                background-color: $veryDarkBlue;
+                padding: 0 20px;
+                cursor: pointer;
+
+
+
+
+                .company-logo {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 20px;
+                    transform: translateY(-30px);
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 20px;
+                    }
+
+                }
+
+                .job-posting-time {
+                    display: flex;
+                    align-items: center;
+                    transform: translateY(-30px);
+                    color: $gray;
+                    height: 60px;
+
+                    p {
+                        font-size: 1em;
+                    }
+
+                    span {
+                        padding: 3px;
+                        margin: 0 10px;
+                        border-radius: 50%;
+                        background-color: $gray;
+                    }
+
+                }
+
+                .job-title {
+                    font-weight: 700;
+                    color: white;
+                    font-size: 1.3em;
+                    transform: translateY(-60px);
+
+                }
+
+                .company-name {
+                    color: $gray;
+                    transform: translateY(-60px);
+                }
+
+                .country {
+                    color: $violet;
+                    font-weight: bold;
+                    transform: translateY(-20px);
+                }
+
+            }
+
+            .job:hover .job-title {
+                color: $gray;
+            }
+        }
+
+        .load-more-btn-wrapper {
+            width: 100%;
+            margin-top: 30px;
+            text-align: center;
+
+            button {
+                padding: 12px 30px;
+                color: white;
+                font-weight: bold;
+                background-color: $violet;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: $lightViolet;
+            }
+        }
+    }
+
+
+}
+
+
+.job-description-section {
+    position: fixed;
+    width: 70%;
+    height: 100vh;
+    background-color: antiquewhite;
+    background-color: $veryDarkBlue;
+    right: 0;
+    top: 0;
+    border-radius: 10px 0 0 10px;
+    overflow-y: auto;
+    transition: all .5s ease-in-out;
+
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .loader-wrapper {
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+        height: inherit;
+        border: 1px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .loader {
+            animation: rotate 1s infinite;
+            height: 50px;
+            width: 50px;
+        }
+
+        .loader:before,
+        .loader:after {
+            border-radius: 50%;
+            content: "";
+            display: block;
+            height: 20px;
+            width: 20px;
+        }
+
+        .loader:before {
+            animation: ball1 1s infinite;
+            background-color: #fff;
+            box-shadow: 30px 0 0 $violet;
+            margin-bottom: 10px;
+        }
+
+        .loader:after {
+            animation: ball2 1s infinite;
+            background-color: $violet;
+            box-shadow: 30px 0 0 #fff;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg) scale(0.8)
+            }
+
+            50% {
+                transform: rotate(360deg) scale(1.2)
+            }
+
+            100% {
+                transform: rotate(720deg) scale(0.8)
+            }
+        }
+
+        @keyframes ball1 {
+            0% {
+                box-shadow: 30px 0 0 $violet;
+            }
+
+            50% {
+                box-shadow: 0 0 0 $violet;
+                margin-bottom: 0;
+                transform: translate(15px, 15px);
+            }
+
+            100% {
+                box-shadow: 30px 0 0 $violet;
+                margin-bottom: 10px;
+            }
+        }
+
+        @keyframes ball2 {
+            0% {
+                box-shadow: 30px 0 0 #fff;
+            }
+
+            50% {
+                box-shadow: 0 0 0 #fff;
+                margin-top: -20px;
+                transform: translate(15px, 15px);
+            }
+
+            100% {
+                box-shadow: 30px 0 0 #fff;
+                margin-top: 0;
+            }
+        }
+
+
+    }
+
+
+    span.material-symbols-outlined {
+        position: fixed !important;
+        color: red;
+        font-size: 3em;
+        left: 32% !important;
+        transform: translate(-50%, -50%);
+        top: 30px;
+        cursor: pointer;
+    }
+
+    i.fa-xmark {
+        position: fixed !important;
+        position: absolute;
+        color: white;
+        font-size: 3em;
+        left: 33% !important;
+        transform: translate(-50%, -50%);
+        top: 50px;
+        cursor: pointer;
+    }
+
+
+    .job-section-container {
+        width: 100%;
+        height: inherit;
+        max-width: 600px;
+        margin: auto;
+        position: relative;
+        padding-top: 50px;
+
+
+        .company-details {
+            max-width: 100%;
+            height: 120px;
+            background-color: $veryDarkBlue;
+            background-color: $midnight;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+            .logo {
+                width: 130px;
+                height: inherit;
+                background: orange;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .details {
+                width: calc(100% - 130px);
+                height: inherit;
+                display: flex;
+                align-items: center;
+                padding: 0 40px;
+                justify-content: space-between;
+
+                .name {
+
+                    p:nth-child(1) {
+                        color: white;
+                        font-weight: bold;
+                        font-size: 1.5em;
+                    }
+
+                    p:nth-child(2) {
+                        color: $darkGrey;
+                        margin-top: -15px;
+                    }
+                }
+
+                .website-link a {
+                    text-decoration: none;
+                    padding: 10px 20px;
+                    background-color: #303642;
+                    border-radius: 3px;
+                    color: white;
+                    font-weight: bold;
+                }
+
+            }
+
+
+        }
+
+        .job-details {
+            max-width: 100%;
+            min-height: 400px;
+            padding: 20px;
+            color: white;
+            margin: 20px 0;
+            background-color: $veryDarkBlue;
+            border-radius: 5px;
+
+            .job-title-container {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .job-title {
+                    max-width: 70%;
+
+
+                    p:nth-child(1) {
+                        color: $darkGrey;
+                        margin-top: -10px;
+
+                        span {
+                            font-size: 3em;
+                        }
+                    }
+
+                    p:nth-child(3) {
+                        color: $violet;
+                        font-weight: bold;
+                        margin-top: -15px;
+                    }
+
+                    h1 {
+                        margin-top: -15px;
+                    }
+                }
+
+                .apply-btn-wrapper {
+                    // margin-bottom: -30px;
+                }
+
+                .apply-btn-wrapper a {
+                    text-decoration: none;
+                    padding: 10px 20px;
+                    background-color: $violet;
+                    color: white;
+                    font-weight: bold;
+                    border-radius: 5px;
+                }
+
+            }
+
+            .job-text-details {
+                color: $gray;
+
+                h2 {
+                    color: white;
+                    font-size: 2em;
+                }
+
+                p {
+                    line-height: 1.5;
+                    font-size: 1.5em;
+                    padding-bottom: 50px;
+                }
+
+                h3 {
+                    color: white;
+                    margin: 50px 0 20px;
+
+                }
+
+                .job-requirement-section {
+
+
+                    ul {
+
+                        li {
+                            list-style: none;
+                            margin-bottom: 10px;
+                        }
+
+                        li::before {
+                            content: "\2022";
+                            color: $violet;
+                            font-weight: bolder;
+                            display: inline-block;
+                            width: 2em;
+                            margin-left: -2em;
+                        }
+                    }
+
+                    ol {
+                        list-style: none;
+                        counter-reset: my-awesome-counter;
+                        padding-bottom: 20px;
+
+                        li {
+                            counter-increment: my-awesome-counter;
+                            margin-bottom: 10px;
+                        }
+
+                        li::before {
+                            content: counter(my-awesome-counter) " ";
+                            color: $violet;
+                            font-weight: bold;
+                            display: inline-block;
+                            width: 2em;
+                            margin-left: -2em;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+
+    }
+
+}
+
+
+.hide-description {
+    transform: translateX(100%) !important;
+    transition: all .5s ease-in-out;
+}
+
+.show {
+    transform: translateX(0) !important;
+    transition: all .5s ease-in-out;
+}
+
+.loader-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loader {
+        animation: rotate 1s infinite;
+        height: 50px;
+        width: 50px;
+    }
+
+    .loader:before,
+    .loader:after {
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 20px;
+        width: 20px;
+    }
+
+    .loader:before {
+        animation: ball1 1s infinite;
+        background-color: #fff;
+        box-shadow: 30px 0 0 $violet;
+        margin-bottom: 10px;
+    }
+
+    .loader:after {
+        animation: ball2 1s infinite;
+        background-color: $violet;
+        box-shadow: 30px 0 0 #fff;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg) scale(0.8)
+        }
+
+        50% {
+            transform: rotate(360deg) scale(1.2)
+        }
+
+        100% {
+            transform: rotate(720deg) scale(0.8)
+        }
+    }
+
+    @keyframes ball1 {
+        0% {
+            box-shadow: 30px 0 0 $violet;
+        }
+
+        50% {
+            box-shadow: 0 0 0 $violet;
+            margin-bottom: 0;
+            transform: translate(15px, 15px);
+        }
+
+        100% {
+            box-shadow: 30px 0 0 $violet;
+            margin-bottom: 10px;
+        }
+    }
+
+    @keyframes ball2 {
+        0% {
+            box-shadow: 30px 0 0 #fff;
+        }
+
+        50% {
+            box-shadow: 0 0 0 #fff;
+            margin-top: -20px;
+            transform: translate(15px, 15px);
+        }
+
+        100% {
+            box-shadow: 30px 0 0 #fff;
+            margin-top: 0;
+        }
+    }
+
+
+}
